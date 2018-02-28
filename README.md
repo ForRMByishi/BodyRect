@@ -14,5 +14,6 @@ Python class for body part detection using OpenCV
 7. Prior to normalization it is quite useful to divide the subtracted histogrammoid into quarts at the longside. Those quarts are cumulative, starting from the mirror line. Meaning q[0] is the inner quart, q[1] the inner half, q[2] the 3/4 and q[3] the whole masked, subtracted, mirror-flipped histogrammoid. Partitioning into quarts offers different perspectives for further machine learning algorithms.
 
 ## Supplied Files
- - pic_n_save: lets you create a pickle file. Creates it from the images found in pic-origs folder
- - 
+ - pic_n_save: Picks the images found in pic-origs folder, does BodyRect recognition and dumps normalized subtracted mirror-flipped scoliosis quantification data as a pickle file in a directory. User has to supply upper and lower boundaries as well as information, if image is either non-scoliotic, scoliotic or postoperative
+ - load_n_plot: plots the pickle files contents with the quartile-information and does matplot
+ - cam_test: test BodyRect recognition with live images
